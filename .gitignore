@@ -6,6 +6,8 @@ app/**/*.css
 app/**/*.css.map
 server/**/*.js
 server/**/*.js.map
+build/**/*.js
+build/**/*.js.map
 node_modules
 yarn.lock
-
+build.log
