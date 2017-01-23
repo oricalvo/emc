@@ -5,19 +5,12 @@ const shelljs = require("shelljs");
 //  So first thing is to compile them and only then we load other scripts
 //  Compile typescript before anyhting else
 //
-(function() {
-    console.log("Compiling typescript");
-    const res = shelljs.exec("node_modules\\.bin\\tsc");
-    if (res.code != 0) {
-        console.error("Typescript compilation failed");
-        return;
-    }
-})();
+compileBuild();
 
 const gulp = require("gulp");
 const build = require("./build/main");
-const path = require("path");
-const baseDir = path.join(__dirname, "..");
+
+build.enableLogging("build.log");
 
 gulp.task("dev", function() {
     return build.dev();
@@ -31,22 +24,19 @@ gulp.task("ts", function () {
     return build.compileTS();
 });
 
-gulp.task("cs", function () {
-    return build.compileCSharp();
-});
-
 gulp.task("server", function() {
     return build.runServerDev();
-});
-
-gulp.task("iis", function () {
-    return build.runIIS();
 });
 
 gulp.task("browser", function() {
     return build.openBrowser();
 });
 
-gulp.task("nuget", function () {
-    return build.restoreNugetPackages();
-});
+function compileBuild() {
+    console.log("Compiling build scripts");
+    const res = shelljs.exec("node_modules\\.bin\\tsc -p ./build");
+    if (res.code != 0) {
+        console.error("Typescript compilation failed");
+        return;
+    }
+}
