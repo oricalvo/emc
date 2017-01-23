@@ -1,7 +1,9 @@
 {
   "name": "emc",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp dev"
+  },
   "licenses": [
     {
       "type": "MIT",
