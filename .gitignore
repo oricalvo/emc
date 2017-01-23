@@ -7,3 +7,5 @@ app/**/*.css.map
 server/**/*.js
 server/**/*.js.map
 node_modules
+yarn.lock
+
