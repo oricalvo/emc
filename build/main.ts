@@ -1,7 +1,7 @@
 import * as open2 from "open";
 import * as helpers from "./helpers";
 import * as logger from "./logger";
-import {config} from "../server/config";
+import {config} from "./config";
 
 export async function dev() {
     await compileTS();

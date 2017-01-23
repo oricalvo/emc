@@ -10,7 +10,7 @@ export interface Config {
     externalPort: number;
 }
 
-export const config: Config = require("../config.json");
+export const config: Config = require("./config.json");
 validate(config);
 
 function validate(config: Config) {
