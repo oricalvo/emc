@@ -1,5 +1,3 @@
-import "reflect-metadata";
-import "zone.js";
 import {NgModule, APP_INITIALIZER} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from "@angular/http";
