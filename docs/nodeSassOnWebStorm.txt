@@ -1,0 +1,8 @@
+Program:
+$ProjectFileDir$\node_modules\.bin\node-sass.cmd
+
+Arguments:
+$FileName$ $FileNameWithoutExtension$.css --source-map $FileNameWithoutExtension$.css.map 
+
+Output paths to refresh:
+$FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map

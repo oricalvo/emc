@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "externalPort": 99999,
+  "version": "1.0.0",
+  "mode": "dev"
+}
